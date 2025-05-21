@@ -111,6 +111,9 @@
                         sum = sum - banknoteOrCoin;
                         Coins001++;
                         break;
+                    default:
+                        Console.WriteLine("Това не е реална банкнота/монета и няма да бъде зачетена!");
+                        break;
                 }
                 if (sum < 0)
                 {
