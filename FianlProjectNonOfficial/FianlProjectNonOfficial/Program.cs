@@ -7,6 +7,7 @@
             DateTime now = DateTime.Now;
             int currentDay = now.Day;
             int currentMonth = now.Month;
+            int currentYear = now.Year;
 
             char a = '"';
             Console.WriteLine($"Добре дошли в Kaufland! Въведете {a}Старт{a}.");
@@ -39,8 +40,8 @@
                     byte month = byte.Parse(Console.ReadLine());
 
                     Console.Write($"Година: ");
-                    ushort year = ushort.Parse(Console.ReadLine());
-
+                    int year = currentYear - age;
+                    Console.WriteLine(year);
                     Console.Write("Въведете брой артикули, които ще закупите: ");
                     int itemCount = int.Parse(Console.ReadLine());
 
