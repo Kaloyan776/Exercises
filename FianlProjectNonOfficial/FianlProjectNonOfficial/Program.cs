@@ -40,8 +40,20 @@
                     byte month = byte.Parse(Console.ReadLine());
 
                     Console.Write($"Година: ");
-                    int year = currentYear - age;
-                    Console.WriteLine(year);
+                    int Birthyear = 0;
+                    if (month > currentMonth)
+                    {
+                        Birthyear = currentYear - age - 1;
+                    }
+                    else if (month < currentMonth)
+                    {
+                        Birthyear = currentYear - age;
+                    }
+                    else
+                    {
+                        Birthyear = currentYear - age;
+                    }
+                        Console.WriteLine(Birthyear);
                     Console.Write("Въведете брой артикули, които ще закупите: ");
                     int itemCount = int.Parse(Console.ReadLine());
 
