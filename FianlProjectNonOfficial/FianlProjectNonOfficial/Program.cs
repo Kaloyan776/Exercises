@@ -28,16 +28,40 @@
                     Console.WriteLine($"Първо искаме да разберем малко повече за Вас!");
                     Console.Write($"Въведете Вашата реална възраст: ");
                     byte age = byte.Parse(Console.ReadLine());
+                    while (age > 134)
+                    {
+                        Console.WriteLine("Вие не съществувате! Въведете по - малка възраст:");
+                        age = byte.Parse(Console.ReadLine());
+                    }
 
                     Console.Write($"Въведете пола си (male/female): ");
                     string gender = Console.ReadLine().ToLower();
 
+
                     Console.WriteLine($"Въведете вашата реална дата на раждане: ");
                     Console.Write($"Ден: ");
                     byte day = byte.Parse(Console.ReadLine());
+                    while (day > 31)
+                    {
+                        Console.WriteLine($"Въведете валиден ден:");
+                        day = byte.Parse(Console.ReadLine());
+                        if (day <= 31)
+                        {
+                            break;
+                        }
+                    }
 
                     Console.Write($"Месец: ");
                     byte month = byte.Parse(Console.ReadLine());
+                    while (month > 12)
+                    {
+                        Console.WriteLine($"Въведете валиден месец:");
+                        month = byte.Parse(Console.ReadLine());
+                        if (month <= 12)
+                        {
+                            break;
+                        }
+                    }
 
                     Console.Write($"Година: ");
                     int Birthyear = 0;
@@ -53,9 +77,18 @@
                     {
                         Birthyear = currentYear - age;
                     }
-                        Console.WriteLine(Birthyear);
+                    Console.WriteLine(Birthyear);
                     Console.Write("Въведете брой артикули, които ще закупите: ");
                     int itemCount = int.Parse(Console.ReadLine());
+                    while (itemCount > 50)
+                    {
+                        Console.WriteLine("Въведете по - малка стойност:");
+                        itemCount = int.Parse(Console.ReadLine());
+                        if (itemCount <= 50)
+                        {
+                            break;
+                        }
+                    }
 
                     double[] array = new double[itemCount];
                     Console.WriteLine("Въведете цената на всеки артикул по отделно: ");
@@ -95,91 +128,91 @@
                         sum = sum - banknoteOrCoin;
                         if (sum > 0)
                         {
-                            Console.WriteLine($"Оставаща сума за доплащане: {sum}");
+                            Console.WriteLine($"Оставаща сума за доплащане: {sum:F2}");
                         }
                         break;
                     case 50:
                         sum = sum - banknoteOrCoin;
                         if (sum > 0)
                         {
-                            Console.WriteLine($"Оставаща сума за доплащане: {sum}");
+                            Console.WriteLine($"Оставаща сума за доплащане: {sum:F2}");
                         }
                         break;
                     case 20:
                         sum = sum - banknoteOrCoin;
                         if (sum > 0)
                         {
-                            Console.WriteLine($"Оставаща сума за доплащане: {sum}");
+                            Console.WriteLine($"Оставаща сума за доплащане: {sum:F2}");
                         }
                         break;
                     case 10:
                         sum = sum - banknoteOrCoin;
                         if (sum > 0)
                         {
-                            Console.WriteLine($"Оставаща сума за доплащане: {sum}");
+                            Console.WriteLine($"Оставаща сума за доплащане: {sum:F2}");
                         }
                         break;
                     case 5:
                         sum = sum - banknoteOrCoin;
                         if (sum > 0)
                         {
-                            Console.WriteLine($"Оставаща сума за доплащане: {sum}");
+                            Console.WriteLine($"Оставаща сума за доплащане: {sum:F2}");
                         }
                         break;
                     case 2:
                         sum = sum - banknoteOrCoin;
                         if (sum > 0)
                         {
-                            Console.WriteLine($"Оставаща сума за доплащане: {sum}");
+                            Console.WriteLine($"Оставаща сума за доплащане: {sum:F2}");
                         }
                         break;
                     case 1:
                         sum = sum - banknoteOrCoin;
                         if (sum > 0)
                         {
-                            Console.WriteLine($"Оставаща сума за доплащане: {sum}");
+                            Console.WriteLine($"Оставаща сума за доплащане: {sum:F2}");
                         }
                         break;
                     case 0.50:
                         sum = sum - banknoteOrCoin;
                         if (sum > 0)
                         {
-                            Console.WriteLine($"Оставаща сума за доплащане: {sum}");
+                            Console.WriteLine($"Оставаща сума за доплащане: {sum:F2}");
                         }
                         break;
                     case 0.20:
                         sum = sum - banknoteOrCoin;
                         if (sum > 0)
                         {
-                            Console.WriteLine($"Оставаща сума за доплащане: {sum}");
+                            Console.WriteLine($"Оставаща сума за доплащане: {sum:F2}");
                         }
                         break;
                     case 0.10:
                         sum = sum - banknoteOrCoin;
                         if (sum > 0)
                         {
-                            Console.WriteLine($"Оставаща сума за доплащане: {sum}");
+                            Console.WriteLine($"Оставаща сума за доплащане: {sum:F2}");
                         }
                         break;
                     case 0.05:
                         sum = sum - banknoteOrCoin;
                         if (sum > 0)
                         {
-                            Console.WriteLine($"Оставаща сума за доплащане: {sum}");
+                            Console.WriteLine($"Оставаща сума за доплащане: {sum:F2}");
                         }
                         break;
                     case 0.02:
                         sum = sum - banknoteOrCoin;
                         if (sum > 0)
                         {
-                            Console.WriteLine($"Оставаща сума за доплащане: {sum}");
+                            Console.WriteLine($"Оставаща сума за доплащане: {sum:F2}");
                         }
                         break;
                     case 0.01:
                         sum = sum - banknoteOrCoin;
                         if (sum > 0)
                         {
-                            Console.WriteLine($"Оставаща сума за доплащане: {sum}");
+                            Console.WriteLine($"Оставаща сума за доплащане: {sum:F2}");
                         }
                         break;
                     default:
