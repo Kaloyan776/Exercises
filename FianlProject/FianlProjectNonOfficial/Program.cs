@@ -9,6 +9,10 @@
             int currentMonth = now.Month;
             int currentYear = now.Year;
 
+            Random random = new Random();
+            int randomNum = random.Next(200, 300);
+            int randomDiscount = random.Next(1, 15);
+
             char a = '"';
             Console.WriteLine($"Добре дошли в Kaufland! Въведете {a}Старт{a}.");
             string pass = Console.ReadLine();
@@ -101,13 +105,15 @@
                     {
                         if (gender == "male")
                         {
-                            Console.WriteLine($"Понеже днес е Вашият рожден ден, днес ползвате еднократа отстъпка, която е -90% от общата сметка, която е {sum} лв!");
-                            sum = sum * 0.10;
+                            Console.WriteLine($"Понеже днес е Вашият рожден ден, днес ползвате еднократа отстъпка,");
+                            Console.WriteLine($"която е -45% от общата сметка, която е {sum} лв!");
+                            sum = sum * 0.55;
                         }
                         else if (gender == "female")
                         {
-                            Console.WriteLine($"Понеже днес е Вашият рожден ден, днес ползвате еднократа отстъпка, която е -50% от общата сметка, която е {sum} лв!");
-                            sum = sum * 0.50;
+                            Console.WriteLine($"Понеже днес е Вашият рожден ден, днес ползвате еднократа отстъпка,");
+                            Console.WriteLine($"която е -25% от общата сметка, която е {sum} лв!");
+                            sum = sum * 0.75;
                         }
                     }
                     b = false;
@@ -128,91 +134,91 @@
                         sum = sum - banknoteOrCoin;
                         if (sum > 0)
                         {
-                            Console.WriteLine($"Оставаща сума за доплащане: {sum:F2}");
+                            Console.WriteLine($"Оставаща сума за доплащане: {sum:F2}лв.");
                         }
                         break;
                     case 50:
                         sum = sum - banknoteOrCoin;
                         if (sum > 0)
                         {
-                            Console.WriteLine($"Оставаща сума за доплащане: {sum:F2}");
+                            Console.WriteLine($"Оставаща сума за доплащане: {sum:F2}лв.");
                         }
                         break;
                     case 20:
                         sum = sum - banknoteOrCoin;
                         if (sum > 0)
                         {
-                            Console.WriteLine($"Оставаща сума за доплащане: {sum:F2}");
+                            Console.WriteLine($"Оставаща сума за доплащане: {sum:F2}лв.");
                         }
                         break;
                     case 10:
                         sum = sum - banknoteOrCoin;
                         if (sum > 0)
                         {
-                            Console.WriteLine($"Оставаща сума за доплащане: {sum:F2}");
+                            Console.WriteLine($"Оставаща сума за доплащане: {sum:F2}лв.");
                         }
                         break;
                     case 5:
                         sum = sum - banknoteOrCoin;
                         if (sum > 0)
                         {
-                            Console.WriteLine($"Оставаща сума за доплащане: {sum:F2}");
+                            Console.WriteLine($"Оставаща сума за доплащане: {sum:F2}лв.");
                         }
                         break;
                     case 2:
                         sum = sum - banknoteOrCoin;
                         if (sum > 0)
                         {
-                            Console.WriteLine($"Оставаща сума за доплащане: {sum:F2}");
+                            Console.WriteLine($"Оставаща сума за доплащане: {sum:F2}лв.");
                         }
                         break;
                     case 1:
                         sum = sum - banknoteOrCoin;
                         if (sum > 0)
                         {
-                            Console.WriteLine($"Оставаща сума за доплащане: {sum:F2}");
+                            Console.WriteLine($"Оставаща сума за доплащане: {sum:F2}лв.");
                         }
                         break;
                     case 0.50:
                         sum = sum - banknoteOrCoin;
                         if (sum > 0)
                         {
-                            Console.WriteLine($"Оставаща сума за доплащане: {sum:F2}");
+                            Console.WriteLine($"Оставаща сума за доплащане: {sum:F2}лв.");
                         }
                         break;
                     case 0.20:
                         sum = sum - banknoteOrCoin;
                         if (sum > 0)
                         {
-                            Console.WriteLine($"Оставаща сума за доплащане: {sum:F2}");
+                            Console.WriteLine($"Оставаща сума за доплащане: {sum:F2}лв.");
                         }
                         break;
                     case 0.10:
                         sum = sum - banknoteOrCoin;
                         if (sum > 0)
                         {
-                            Console.WriteLine($"Оставаща сума за доплащане: {sum:F2}");
+                            Console.WriteLine($"Оставаща сума за доплащане: {sum:F2}лв.");
                         }
                         break;
                     case 0.05:
                         sum = sum - banknoteOrCoin;
                         if (sum > 0)
                         {
-                            Console.WriteLine($"Оставаща сума за доплащане: {sum:F2}");
+                            Console.WriteLine($"Оставаща сума за доплащане: {sum:F2}лв.");
                         }
                         break;
                     case 0.02:
                         sum = sum - banknoteOrCoin;
                         if (sum > 0)
                         {
-                            Console.WriteLine($"Оставаща сума за доплащане: {sum:F2}");
+                            Console.WriteLine($"Оставаща сума за доплащане: {sum:F2}лв.");
                         }
                         break;
                     case 0.01:
                         sum = sum - banknoteOrCoin;
                         if (sum > 0)
                         {
-                            Console.WriteLine($"Оставаща сума за доплащане: {sum:F2}");
+                            Console.WriteLine($"Оставаща сума за доплащане: {sum:F2}лв.");
                         }
                         break;
                     default:
@@ -223,6 +229,10 @@
                 {
                     double change = Math.Abs(sum);
                     Console.WriteLine($"Вашето ресто е: {change:F2}лв.");
+                    Console.WriteLine($"Понеже Вие сте наш лоялен клиент,");
+                    Console.WriteLine($"ние Ви предоставяме безплатен промокод с номер {randomNum},");
+                    Console.WriteLine($"който Ви дава -{randomDiscount}% отстъпка при следващо пазаруване!");
+                    Console.WriteLine($"Пожелаваме Ви хубав ден!");
                     c = false;
                 }
                 if (!c)
