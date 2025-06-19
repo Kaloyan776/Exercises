@@ -42,7 +42,7 @@
                     string gender = Console.ReadLine().ToLower();
 
 
-                    Console.WriteLine($"Въведете вашата реална дата на раждане: ");
+                    Console.WriteLine($"Въведете вашата реална дата на раждане (пример - 15): ");
                     Console.Write($"Ден(пример - 07): ");
                     byte day = byte.Parse(Console.ReadLine());
                     while (day > 31)
