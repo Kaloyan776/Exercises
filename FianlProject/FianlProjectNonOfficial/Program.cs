@@ -17,8 +17,8 @@
             Console.WriteLine($"Добре дошли в Kaufland! Въведете {a}Старт{a}.");
             string pass = Console.ReadLine();
 
-            bool b = true;
-            bool c = true;
+            bool breakpoint = true;
+            bool colision = true;
             double sum = 0;
             while (true)
             {
@@ -43,7 +43,7 @@
 
 
                     Console.WriteLine($"Въведете вашата реална дата на раждане: ");
-                    Console.Write($"Ден: ");
+                    Console.Write($"Ден(пример - 07): ");
                     byte day = byte.Parse(Console.ReadLine());
                     while (day > 31)
                     {
@@ -55,7 +55,7 @@
                         }
                     }
 
-                    Console.Write($"Месец: ");
+                    Console.Write($"Месец (пример - 08): ");
                     byte month = byte.Parse(Console.ReadLine());
                     while (month > 12)
                     {
@@ -82,7 +82,7 @@
                         Birthyear = currentYear - age;
                     }
                     Console.WriteLine(Birthyear);
-                    Console.Write("Въведете брой артикули, които ще закупите: ");
+                    Console.Write("Въведете брой артикули, които ще закупите (пример - 13): ");
                     int itemCount = int.Parse(Console.ReadLine());
                     while (itemCount > 50)
                     {
@@ -95,7 +95,7 @@
                     }
 
                     double[] array = new double[itemCount];
-                    Console.WriteLine("Въведете цената на всеки артикул по отделно: ");
+                    Console.WriteLine("Въведете цената на всеки артикул по отделно (пример - 4.81 и натискате Enter): ");
                     for (int i = 0; i < array.Length; i++)
                     {
                         array[i] = double.Parse(Console.ReadLine());
@@ -116,9 +116,9 @@
                             sum = sum * 0.75;
                         }
                     }
-                    b = false;
+                    breakpoint = false;
                 }
-                if (!b)
+                if (!breakpoint)
                 {
                     break;
                 }
@@ -233,9 +233,9 @@
                     Console.WriteLine($"ние Ви предоставяме безплатен промокод с номер {randomNum},");
                     Console.WriteLine($"който Ви дава -{randomDiscount}% отстъпка при следващо пазаруване!");
                     Console.WriteLine($"Пожелаваме Ви хубав ден!");
-                    c = false;
+                    colision = false;
                 }
-                if (!c)
+                if (!colision)
                 { break; }
 
             }
